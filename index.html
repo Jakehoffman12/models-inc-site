@@ -6,51 +6,57 @@
   <title>MODELS Inc.</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
   <style>
-    body {
-      font-family: 'Inter', sans-serif;
-    }
-    h1, h2, h3, h4 {
-      font-family: 'Playfair Display', serif;
-    }
+    body { font-family: 'Inter', sans-serif; }
+    h1, h2, h3, h4 { font-family: 'Playfair Display', serif; }
     .logo-bg {
       position: absolute;
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-      opacity: 0.05;
+      opacity: 0.04;
       z-index: 0;
-      width: 400px;
-      height: auto;
+      width: 500px;
       pointer-events: none;
     }
     @media (max-width: 768px) {
-      .logo-bg {
-        display: none;
-      }
+      .logo-bg { display: none; }
     }
   </style>
 </head>
-<body class="bg-white text-black relative">
+<body class="bg-white text-black relative" data-barba="wrapper">
+<div data-barba="container" data-barba-namespace="home">
 
-  <!-- Background Logo -->
-  <img src="models-inc-logo-bg.png" alt="MODELS Inc. Logo" class="logo-bg" />
+<img src="models-inc-logo-bg.png" alt="MODELS Inc. Logo" class="logo-bg" />
 
-  <!-- Hero Section -->
-  <section class="h-screen flex flex-col justify-center items-center text-center px-4 relative z-10">
-    <h1 class="text-5xl mb-4">MODELS Inc.</h1>
-    <p class="text-lg text-neutral-600 mb-8">Where Influence Meets Ownership</p>
-    <a href="apply.html" class="px-6 py-3 bg-black text-white rounded-2xl shadow hover:bg-neutral-800 transition">
-      Join the Collective
-    </a>
-    <a href="about.html" class="mt-6 block text-xs text-neutral-400 hover:text-black transition">
-      ▼ Learn more
-    </a>
-  </section>
+<section class="h-screen flex flex-col justify-center items-center text-center px-4 relative z-10">
+  <h1 class="text-5xl mb-4" data-aos="fade-up">MODELS Inc.</h1>
+  <p class="text-lg text-neutral-600 mb-8" data-aos="fade-up" data-aos-delay="100">Where Influence Meets Ownership</p>
+  <a href="apply.html" class="px-6 py-3 bg-black text-white rounded-2xl shadow hover:bg-neutral-800 transition" data-aos="fade-up" data-aos-delay="200">Join the Collective</a>
+  <a href="about.html" class="mt-6 block text-xs text-neutral-400 hover:text-black transition" data-aos="fade-up" data-aos-delay="300">▼ Learn more</a>
+</section>
 
-  <footer class="py-12 px-6 text-center text-sm text-neutral-500 border-t border-neutral-200">
-    © 2025 MODELS Inc. | All rights reserved
-  </footer>
+<footer class="py-12 px-6 text-center text-sm text-neutral-500 border-t border-neutral-200">
+  © 2025 MODELS Inc. | All rights reserved
+</footer>
 
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>AOS.init();</script>
+<script src="https://unpkg.com/@barba/core"></script>
+<script>
+  barba.init({
+    transitions: [{
+      name: 'fade',
+      leave(data) {
+        return gsap.to(data.current.container, { opacity: 0 });
+      },
+      enter(data) {
+        return gsap.from(data.next.container, { opacity: 0 });
+      }
+    }]
+  });
+</script>
+</div>
 </body>
 </html>
