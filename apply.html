@@ -3,35 +3,49 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Apply to Join – MODELS Inc.</title>
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <title>Apply – MODELS Inc.</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+    h1, h2, h3, h4 {
+      font-family: 'Playfair Display', serif;
+    }
+    .logo-faint {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      opacity: 0.04;
+      z-index: 0;
+      width: 500px;
+      pointer-events: none;
+    }
+    @media (max-width: 768px) {
+      .logo-faint {
+        display: none;
+      }
+    }
+  </style>
 </head>
-<body class="min-h-screen bg-white text-black font-sans">
+<body class="bg-white text-black relative overflow-hidden">
 
-  <header class="py-6 px-4 text-center">
-    <h1 class="text-4xl font-serif">MODELS Inc.</h1>
-    <p class="text-neutral-600 mt-2">Apply to Join the Collective</p>
-  </header>
+  <img src="models-inc-logo-bg.png" alt="MODELS Inc. Background Logo" class="logo-faint" />
 
-  <section class="py-20 px-6 bg-white text-center">
-    <h2 class="text-3xl md:text-5xl font-serif mb-10">Apply to Join</h2>
-    <form class="max-w-3xl mx-auto grid gap-6">
-      <div>
-        <label class="block mb-2 font-medium">I am a...</label>
-        <select class="w-full p-3 rounded-xl border border-neutral-300">
-          <option>Influencer</option>
-          <option>Founder</option>
-          <option>Investor</option>
-        </select>
-      </div>
-      <input type="text" placeholder="Name" class="p-3 rounded-xl border border-neutral-300" />
-      <input type="email" placeholder="Email" class="p-3 rounded-xl border border-neutral-300" />
-      <input type="text" placeholder="Link to Social" class="p-3 rounded-xl border border-neutral-300" />
-      <button type="submit" class="px-6 py-3 bg-black text-white rounded-2xl shadow hover:bg-neutral-800 transition">Submit</button>
-    </form>
+  <section class="min-h-screen flex flex-col justify-center items-center px-6 text-center relative z-10">
+    <h1 class="text-4xl md:text-5xl mb-6">Applications Are Currently Closed</h1>
+    <p class="text-lg text-neutral-700 max-w-xl mb-8">
+      Due to overwhelming interest, MODELS Inc. is not accepting new applications at this time.
+      We’re building something rare — a collective of cultural architects and visionary founders.
+    </p>
+    <p class="text-md text-neutral-500 italic">
+      Want to be the first to know when doors open again? Stay close.
+    </p>
   </section>
 
-  <footer class="py-12 px-6 text-center text-sm text-neutral-500">
+  <footer class="py-12 px-6 text-center text-sm text-neutral-500 border-t border-neutral-200">
     © 2025 MODELS Inc. | All rights reserved
   </footer>
 
