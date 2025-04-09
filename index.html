@@ -6,10 +6,14 @@
   <title>MODELS Inc.</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
-  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
   <style>
-    body { font-family: 'Inter', sans-serif; }
-    h1, h2, h3, h4 { font-family: 'Playfair Display', serif; }
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+    h1, h2, h3, h4 {
+      font-family: 'Playfair Display', serif;
+    }
     .logo-bg {
       position: absolute;
       top: 50%;
@@ -23,19 +27,34 @@
     @media (max-width: 768px) {
       .logo-bg { display: none; }
     }
+    .editorial-link {
+      font-size: 1.25rem;
+      font-weight: 600;
+      text-decoration: underline;
+      transition: color 0.3s ease;
+    }
+    .editorial-link:hover {
+      color: black;
+    }
   </style>
 </head>
-<body class="bg-white text-black relative" data-barba="wrapper">
+<body class="bg-white text-black relative overflow-hidden" data-barba="wrapper">
 <div data-barba="container" data-barba-namespace="home">
 
 <img src="models-inc-logo-bg.png" alt="MODELS Inc. Logo" class="logo-bg" />
 
-<section class="h-screen flex flex-col justify-center items-center text-center px-4 relative z-10">
-  <h1 class="text-5xl mb-4" data-aos="fade-up">MODELS Inc.</h1>
-  <p class="text-lg text-neutral-600 mb-8" data-aos="fade-up" data-aos-delay="100">Where Influence Meets Ownership</p>
-  <a href="apply.html" class="px-6 py-3 bg-black text-white rounded-2xl shadow hover:bg-neutral-800 transition" data-aos="fade-up" data-aos-delay="200">Join the Collective</a>
-  <a href="about.html" class="mt-6 block text-xs text-neutral-400 hover:text-black transition" data-aos="fade-up" data-aos-delay="300">▼ Learn more</a>
-</section>
+<main class="min-h-screen flex flex-col justify-center items-center text-center px-6 md:px-12 relative z-10">
+  <h1 class="text-5xl md:text-7xl font-serif leading-tight mb-6" data-aos="fade-up">
+    MODELS Inc.
+  </h1>
+  <p class="text-lg md:text-xl text-neutral-600 max-w-xl mb-10" data-aos="fade-up" data-aos-delay="100">
+    Where influence meets ownership. A selective collective of cultural architects investing in the future of brand, equity and creative capital.
+  </p>
+  <div class="space-y-6 text-lg" data-aos="fade-up" data-aos-delay="200">
+    <a href="apply.html" class="editorial-link">Join the Collective →</a><br>
+    <a href="about.html" class="editorial-link">Learn more →</a>
+  </div>
+</main>
 
 <footer class="py-12 px-6 text-center text-sm text-neutral-500 border-t border-neutral-200">
   © 2025 MODELS Inc. | All rights reserved
