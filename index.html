@@ -4,78 +4,105 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>MODELS Inc.</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
-  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
   <style>
     body {
-      font-family: 'Inter', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #0b0b0b;
+      color: #eaeaea;
+      font-family: 'Georgia', serif;
+      line-height: 1.6;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
     }
-    h1, h2, h3, h4 {
-      font-family: 'Playfair Display', serif;
+
+    header {
+      text-align: center;
+      padding: 60px 20px 20px;
     }
-    .logo-bg {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      opacity: 0.04;
-      z-index: 0;
-      width: 500px;
-      pointer-events: none;
+
+    header img {
+      max-width: 180px;
+      opacity: 0.85;
     }
-    @media (max-width: 768px) {
-      .logo-bg { display: none; }
+
+    .hero {
+      padding: 80px 20px;
+      max-width: 800px;
+      margin: 0 auto;
+      text-align: center;
     }
-    .editorial-link {
+
+    .headline {
+      font-size: 2.8rem;
+      font-weight: 400;
+      margin-bottom: 20px;
+      letter-spacing: -0.5px;
+    }
+
+    .subheadline {
       font-size: 1.25rem;
-      font-weight: 600;
-      text-decoration: underline;
-      transition: color 0.3s ease;
+      font-weight: 300;
+      margin-bottom: 40px;
+      color: #c7c7c7;
     }
-    .editorial-link:hover {
-      color: black;
+
+    .description {
+      font-size: 1.1rem;
+      color: #aaaaaa;
+      margin-bottom: 60px;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .cta-button {
+      background-color: transparent;
+      color: #eaeaea;
+      border: 1px solid #eaeaea;
+      padding: 12px 30px;
+      text-transform: uppercase;
+      font-size: 0.85rem;
+      letter-spacing: 1.2px;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+
+    .cta-button:hover {
+      background-color: #eaeaea;
+      color: #0b0b0b;
+    }
+
+    footer {
+      text-align: center;
+      padding: 40px 20px;
+      font-size: 0.8rem;
+      color: #555;
+      margin-top: auto;
     }
   </style>
 </head>
-<body class="bg-white text-black relative overflow-hidden" data-barba="wrapper">
-<div data-barba="container" data-barba-namespace="home">
+<body>
 
-<img src="models-inc-logo-bg.png" alt="MODELS Inc. Logo" class="logo-bg" />
+  <header>
+    <img src="models-inc-logo-bg.png" alt="MODELS Inc. logo">
+  </header>
 
-<main class="min-h-screen flex flex-col justify-center items-center text-center px-6 md:px-12 relative z-10">
-  <h1 class="text-5xl md:text-7xl font-serif leading-tight mb-6" data-aos="fade-up">
-    MODELS Inc.
-  </h1>
-  <p class="text-lg md:text-xl text-neutral-600 max-w-xl mb-10" data-aos="fade-up" data-aos-delay="100">
-    Where influence meets ownership. A selective collective of cultural architects investing in the future of brand, equity and creative capital.
-  </p>
-  <div class="space-y-6 text-lg" data-aos="fade-up" data-aos-delay="200">
-    <a href="apply.html" class="editorial-link">Join the Collective →</a><br>
-    <a href="about.html" class="editorial-link">Learn more →</a>
-  </div>
-</main>
+  <section class="hero">
+    <h1 class="headline">Not a partnership. A power shift.</h1>
+    <p class="subheadline">Where influencers get investment — and investment gets influence.</p>
+    <p class="description">
+      MODELS Inc. is a private collective where influence becomes ownership.<br>
+      Co-create brands. Hold equity. Change the model.
+    </p>
+    <a href="apply.html" class="cta-button">Join the List</a>
+  </section>
 
-<footer class="py-12 px-6 text-center text-sm text-neutral-500 border-t border-neutral-200">
-  © 2025 MODELS Inc. | All rights reserved
-</footer>
+  <footer>
+    &copy; MODELS Inc. — 2025
+  </footer>
 
-<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-<script>AOS.init();</script>
-<script src="https://unpkg.com/@barba/core"></script>
-<script>
-  barba.init({
-    transitions: [{
-      name: 'fade',
-      leave(data) {
-        return gsap.to(data.current.container, { opacity: 0 });
-      },
-      enter(data) {
-        return gsap.from(data.next.container, { opacity: 0 });
-      }
-    }]
-  });
-</script>
-</div>
 </body>
 </html>
