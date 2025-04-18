@@ -12,11 +12,19 @@
     h1, h2, h3, h4 { font-family: 'Playfair Display', serif; }
   </style>
 </head>
-<body class="flex bg-white text-black">
+<body class="bg-white text-black">
 
-  <!-- Sidebar -->
-  <aside class="w-64 min-h-screen bg-neutral-100 border-r border-neutral-300 p-6 fixed">
-    <h1 class="text-2xl font-semibold mb-8">MODELS Inc.</h1>
+  <!-- Hamburger Icon -->
+  <div class="p-4 fixed top-0 left-0 z-50">
+    <button id="menu-toggle" class="text-3xl focus:outline-none">&#9776;</button>
+  </div>
+
+  <!-- Slide-in Sidebar -->
+  <aside id="sidebar" class="fixed top-0 left-0 w-64 h-full bg-neutral-100 border-r border-neutral-300 p-6 transform -translate-x-full transition-transform duration-300 z-40">
+    <div class="flex justify-between items-center mb-8">
+      <h1 class="text-2xl font-semibold">MODELS Inc.</h1>
+      <button id="menu-close" class="text-xl">&times;</button>
+    </div>
     <nav class="space-y-4 text-lg">
       <a href="index.html" class="block hover:text-neutral-600">Home</a>
       <a href="about.html" class="block hover:text-neutral-600">Learn More</a>
@@ -29,8 +37,7 @@
   </aside>
 
   <!-- Main content area -->
-  <main class="ml-64 w-full p-8">
-    <!-- Insert your hero, helix section, how it works etc. here -->
+  <main class="p-8 pt-20 max-w-5xl mx-auto">
     <section class="py-24 text-center">
       <h2 class="text-4xl mb-6" data-aos="fade-up">Welcome to MODELS Inc.</h2>
       <p class="text-neutral-600 max-w-xl mx-auto" data-aos="fade-up" data-aos-delay="100">
@@ -38,7 +45,6 @@
       </p>
     </section>
 
-    <!-- Example section marker -->
     <section id="how-it-works" class="py-20 text-center">
       <h2 class="text-3xl mb-4" data-aos="fade-up">How It Works</h2>
       <p class="text-neutral-700 max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="100">
@@ -46,14 +52,26 @@
       </p>
     </section>
 
-    <!-- Add more sections as needed -->
-
     <footer class="mt-20 text-center text-sm text-neutral-500">
       © 2025 MODELS Inc. | All rights reserved
     </footer>
   </main>
 
+  <!-- Scripts -->
   <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
   <script>AOS.init();</script>
+  <script>
+    const toggleBtn = document.getElementById('menu-toggle');
+    const closeBtn = document.getElementById('menu-close');
+    const sidebar = document.getElementById('sidebar');
+
+    toggleBtn.addEventListener('click', () => {
+      sidebar.classList.remove('-translate-x-full');
+    });
+
+    closeBtn.addEventListener('click', () => {
+      sidebar.classList.add('-translate-x-full');
+    });
+  </script>
 </body>
 </html>
