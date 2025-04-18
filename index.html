@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>MODELS Inc.</title>
 
-  <!-- Google Font: Playfair Display only -->
+  <!-- Font -->
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;700&display=swap" rel="stylesheet">
 
   <style>
@@ -16,14 +16,11 @@
       color: #1a1a1a;
       font-family: 'Playfair Display', serif;
       line-height: 1.6;
-      display: flex;
-      flex-direction: column;
-      min-height: 100vh;
     }
 
     header {
       text-align: center;
-      padding: 60px 20px 20px;
+      padding: 30px 20px 20px; /* tighter spacing */
     }
 
     header img {
@@ -32,86 +29,63 @@
     }
 
     .hero {
-      padding: 100px 20px;
       max-width: 800px;
       margin: 0 auto;
       text-align: center;
-      position: relative;
-      z-index: 1;
+      padding: 40px 20px 80px;
     }
 
-    .hero::before {
-      content: "";
-      background-image: url('models-logo.png');
-      background-repeat: no-repeat;
-      background-position: center;
-      background-size: 260px;
-      opacity: 0.02;
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      z-index: 0;
-    }
-
-    .headline {
-      font-size: 2.8rem;
-      font-weight: 400;
+    h1 {
+      font-size: 1.8rem;
+      font-weight: 500;
       margin-bottom: 20px;
-      letter-spacing: -0.5px;
-      position: relative;
-      z-index: 1;
     }
 
-    .subheadline {
-      font-size: 1.25rem;
+    h2 {
+      font-size: 1.3rem;
       font-weight: 400;
-      margin-bottom: 40px;
-      color: #555;
-      position: relative;
-      z-index: 1;
+      margin-bottom: 30px;
+      color: #333;
     }
 
-    .description {
+    p {
       font-size: 1.1rem;
-      color: #555;
-      margin-bottom: 40px;
-      max-width: 600px;
-      margin-left: auto;
-      margin-right: auto;
-      position: relative;
-      z-index: 1;
-    }
-
-    .learn-more {
-      margin-bottom: 60px;
-      position: relative;
-      z-index: 1;
-    }
-
-    .learn-more p {
-      font-size: 1.1rem;
-      color: #555;
+      color: #444;
       margin-bottom: 30px;
     }
 
-    .cta-button {
-      background-color: transparent;
-      color: #1a1a1a;
-      border: 1px solid #1a1a1a;
-      padding: 12px 30px;
-      text-transform: uppercase;
-      font-size: 0.85rem;
-      letter-spacing: 1.2px;
-      text-decoration: none;
-      transition: all 0.3s ease;
-      position: relative;
-      z-index: 1;
-      margin: 0 10px;
+    .cta {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 50px;
+      max-width: 700px;
+      margin: 0 auto;
     }
 
-    .cta-button:hover {
+    .cta-section {
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    .cta-section h3 {
+      font-size: 1.2rem;
+      font-weight: 500;
+      margin-bottom: 15px;
+    }
+
+    .cta-section a {
+      text-decoration: none;
+      font-size: 1rem;
+      color: #1a1a1a;
+      border: 1px solid #1a1a1a;
+      padding: 12px 28px;
+      border-radius: 50px;
+      display: inline-block;
+      transition: all 0.3s ease;
+    }
+
+    .cta-section a:hover {
       background-color: #1a1a1a;
       color: #f5f4f2;
     }
@@ -121,7 +95,6 @@
       padding: 40px 20px;
       font-size: 0.8rem;
       color: #999;
-      margin-top: auto;
     }
   </style>
 </head>
@@ -131,24 +104,23 @@
     <img src="models-logo.png" alt="MODELS Inc. logo">
   </header>
 
-  <section class="hero">
-    <h1 class="headline">Not a partnership. A power shift.</h1>
-    <p class="subheadline">Where influencers get investment — and investment gets influence.</p>
-    <p class="description">
-      MODELS Inc. is a private collective where influence becomes ownership.<br>
-      Co-create brands. Hold equity. Change the model.
-    </p>
+  <div class="hero">
+    <h1>Not a partnership. A power shift.</h1>
+    <h2>Where influencers get investment — and investment gets influence.</h2>
+    <p>MODELS Inc. is a private collective where influence becomes ownership.<br>
+    Co-create brands. Hold equity. Change the model.</p>
+  </div>
 
-    <div class="learn-more">
-      <p>
-        We don’t partner. We conspire.<br>
-        Learn more about our process, our people, and the quiet power behind the brands.
-      </p>
-      <a href="about.html" class="cta-button">Learn More</a>
+  <div class="cta">
+    <div class="cta-section">
+      <h3>Want to understand how MODELS Inc. works behind the curtain?</h3>
+      <a href="about.html">Learn more</a>
     </div>
-
-    <a href="apply.html" class="cta-button">Join the List</a>
-  </section>
+    <div class="cta-section">
+      <h3>Want in?</h3>
+      <a href="apply.html">Join the list</a>
+    </div>
+  </div>
 
   <footer>
     &copy; MODELS Inc. — 2025
