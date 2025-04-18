@@ -34,22 +34,41 @@
       padding: 0 20px 100px;
     }
 
-    section {
-      margin-bottom: 100px;
+    details {
+      border-top: 1px solid #ccc;
+      padding: 30px 0;
     }
 
-    h2 {
-      font-size: 1.8rem;
+    details:last-of-type {
+      border-bottom: 1px solid #ccc;
+    }
+
+    summary {
+      font-size: 1.4rem;
       font-weight: 500;
-      margin-bottom: 30px;
-      border-bottom: 1px solid #ddd;
-      padding-bottom: 10px;
+      cursor: pointer;
+      outline: none;
+    }
+
+    summary::-webkit-details-marker {
+      display: none;
+    }
+
+    summary:after {
+      content: "▸";
+      float: right;
+      transition: transform 0.3s ease;
+    }
+
+    details[open] summary:after {
+      transform: rotate(90deg);
     }
 
     p {
       font-size: 1.1rem;
       color: #444;
-      margin-bottom: 25px;
+      margin: 20px 0;
+      padding-right: 10px;
     }
 
     footer {
@@ -68,26 +87,26 @@
 
   <div class="container">
 
-    <section>
-      <h2>What’s Broken</h2>
+    <details>
+      <summary>What’s Broken</summary>
       <p>The influencing world runs on exposure — but rarely offers ownership.</p>
       <p>You make the product desirable, but you don’t share in what it earns.</p>
       <p>You’re handed a brief, not a stake. A contract, not a vision.</p>
       <p>Trends move fast. Loyalty is shallow. Creators are replaceable.</p>
       <p>You’re expected to perform — not participate.</p>
-    </section>
+    </details>
 
-    <section>
-      <h2>What We’re Changing</h2>
+    <details>
+      <summary>What We’re Changing</summary>
       <p>MODELS Inc flips the model.</p>
       <p>You don’t promote what you didn’t help shape.</p>
       <p>You co-create brands from the start — and you own a part of what you build.</p>
       <p>We slow things down. Prioritise intention over output.</p>
       <p>And give you real space to move, contribute, and build legacy — not just content.</p>
-    </section>
+    </details>
 
-    <section>
-      <h2>What We Are</h2>
+    <details>
+      <summary>What We Are</summary>
       <p>MODELS Inc. is a private collective where influence meets ownership.</p>
       <p>We partner with a handpicked group of like-minded creators — not to just promote brands, but to co-found them.</p>
       <p>You don’t pay to join. You’re brought in as a co-founder.</p>
@@ -97,20 +116,20 @@
       <p>And it’s just the beginning.</p>
       <p>MODELS Inc. is where influence becomes ownership.</p>
       <p>Where influencers get investment, and investment gets influence.</p>
-    </section>
+    </details>
 
-    <section>
-      <h2>What We Believe</h2>
+    <details>
+      <summary>What We Believe</summary>
       <p>You’ve built communities, defined aesthetics, and shaped culture.</p>
       <p>That kind of influence is capital — and you deserve a stake in what it creates.</p>
       <p>We believe your value goes beyond promotion. You deserve ownership.</p>
       <p>MODELS Inc is built on shared vision and the belief that the next generation of brands will be created with you — not on top of you.</p>
       <p>This isn’t just a platform to support.</p>
       <p>It’s one you can stand on.</p>
-    </section>
+    </details>
 
-    <section>
-      <h2>What We Build</h2>
+    <details>
+      <summary>What We Build</summary>
       <p>MODELS Inc builds brands — but not just any brands.</p>
       <p>We create products, systems, and rituals that feel inevitable. The kind people don’t just buy — they believe in.</p>
       <p>Our first is Beau — a sculptural bottle reimagining hydration as a luxury ritual.</p>
@@ -121,10 +140,10 @@
       <p>We don’t chase trends. We create culture.</p>
       <p>Built slowly. Built beautifully.</p>
       <p>Built to last.</p>
-    </section>
+    </details>
 
-    <section>
-      <h2>Who We Back</h2>
+    <details>
+      <summary>Who We Back</summary>
       <p>We don’t hire. We don’t manage. We don’t take applications.</p>
       <p>We back people who move differently — who lead with taste, intuition, and intention.</p>
       <p>You don’t need millions of followers. You need vision.</p>
@@ -133,7 +152,7 @@
       <p>This isn’t another paid promo. It’s a seat at the table.</p>
       <p>MODELS Inc is a space for founders — not just influencers.</p>
       <p>And if you know, you know.</p>
-    </section>
+    </details>
 
   </div>
 
