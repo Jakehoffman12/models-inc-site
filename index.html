@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>About – MODELS Inc.</title>
+  <title>MODELS Inc.</title>
 
-  <!-- Font -->
+  <!-- Google Font: Playfair Display only -->
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;700&display=swap" rel="stylesheet">
 
   <style>
@@ -15,12 +15,15 @@
       background-color: #f5f4f2;
       color: #1a1a1a;
       font-family: 'Playfair Display', serif;
-      line-height: 1.8;
+      line-height: 1.6;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
     }
 
     header {
       text-align: center;
-      padding: 60px 20px 40px;
+      padding: 60px 20px 20px;
     }
 
     header img {
@@ -28,32 +31,89 @@
       opacity: 0.85;
     }
 
-    .container {
+    .hero {
+      padding: 100px 20px;
       max-width: 800px;
       margin: 0 auto;
-      padding: 0 20px 100px;
-    }
-
-    section {
-      margin-bottom: 80px;
-    }
-
-    h2 {
-      font-size: 1.6rem;
-      font-weight: 500;
-      margin-bottom: 20px;
-    }
-
-    p {
-      font-size: 1.1rem;
-      color: #444;
-    }
-
-    .divider {
       text-align: center;
-      margin: 60px 0;
-      font-size: 1.5rem;
-      opacity: 0.15;
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero::before {
+      content: "";
+      background-image: url('models-logo.png');
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 260px;
+      opacity: 0.02;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 0;
+    }
+
+    .headline {
+      font-size: 2.8rem;
+      font-weight: 400;
+      margin-bottom: 20px;
+      letter-spacing: -0.5px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .subheadline {
+      font-size: 1.25rem;
+      font-weight: 400;
+      margin-bottom: 40px;
+      color: #555;
+      position: relative;
+      z-index: 1;
+    }
+
+    .description {
+      font-size: 1.1rem;
+      color: #555;
+      margin-bottom: 40px;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+      position: relative;
+      z-index: 1;
+    }
+
+    .learn-more {
+      margin-bottom: 60px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .learn-more p {
+      font-size: 1.1rem;
+      color: #555;
+      margin-bottom: 30px;
+    }
+
+    .cta-button {
+      background-color: transparent;
+      color: #1a1a1a;
+      border: 1px solid #1a1a1a;
+      padding: 12px 30px;
+      text-transform: uppercase;
+      font-size: 0.85rem;
+      letter-spacing: 1.2px;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      position: relative;
+      z-index: 1;
+      margin: 0 10px;
+    }
+
+    .cta-button:hover {
+      background-color: #1a1a1a;
+      color: #f5f4f2;
     }
 
     footer {
@@ -61,6 +121,7 @@
       padding: 40px 20px;
       font-size: 0.8rem;
       color: #999;
+      margin-top: auto;
     }
   </style>
 </head>
@@ -70,117 +131,24 @@
     <img src="models-logo.png" alt="MODELS Inc. logo">
   </header>
 
-  <div class="container">
+  <section class="hero">
+    <h1 class="headline">Not a partnership. A power shift.</h1>
+    <p class="subheadline">Where influencers get investment — and investment gets influence.</p>
+    <p class="description">
+      MODELS Inc. is a private collective where influence becomes ownership.<br>
+      Co-create brands. Hold equity. Change the model.
+    </p>
 
-    <section>
-      <h2>What’s Broken</h2>
+    <div class="learn-more">
       <p>
-        The influencing world runs on exposure — but rarely offers ownership.<br>
-        You make the product desirable, but you don’t share in what it earns.<br>
-        You’re handed a brief, not a stake. A contract, not a vision.
+        We don’t partner. We conspire.<br>
+        Learn more about our process, our people, and the quiet power behind the brands.
       </p>
-      <p>
-        Trends move fast. Loyalty is shallow. Creators are replaceable.<br>
-        You’re expected to perform — not participate.
-      </p>
-    </section>
+      <a href="about.html" class="cta-button">Learn More</a>
+    </div>
 
-    <div class="divider">⸻</div>
-
-    <section>
-      <h2>What We’re Changing</h2>
-      <p>
-        MODELS Inc flips the model.<br>
-        You don’t promote what you didn’t help shape.<br>
-        You co-create brands from the start — and you own a part of what you build.
-      </p>
-      <p>
-        We slow things down. Prioritise intention over output.<br>
-        And give you real space to move, contribute, and build legacy — not just content.
-      </p>
-    </section>
-
-    <section>
-      <h2>What We Are</h2>
-      <p>
-        MODELS Inc. is a private collective where influence meets ownership.<br>
-        We partner with a handpicked group of like-minded creators — not to just promote brands, but to co-found them.<br>
-        You don’t pay to join. You’re brought in as a co-founder.<br>
-        You gain equity, creative direction, and a seat at the table.
-      </p>
-      <p>
-        This is about building brands that resonate with you — with real meaning and long-term value.
-      </p>
-      <p>
-        Our first brand, Beau, is already in motion — a sculptural bottle reimagining wellness as ritual.<br>
-        And it’s just the beginning.
-      </p>
-      <p>
-        MODELS Inc. is where influence becomes ownership.<br>
-        Where influencers get investment, and investment gets influence.
-      </p>
-    </section>
-
-    <section>
-      <h2>What We Believe</h2>
-      <p>
-        You’ve built communities, defined aesthetics, and shaped culture. That kind of influence is capital — and you deserve a stake in what it creates.
-      </p>
-      <p>
-        We believe your value goes beyond promotion. You deserve ownership.<br>
-        MODELS Inc is built on shared vision and the belief that the next generation of brands will be created with you — not on top of you.
-      </p>
-      <p>
-        This isn’t just a platform to support.<br>
-        It’s one you can stand on.
-      </p>
-    </section>
-
-    <section>
-      <h2>What We Build</h2>
-      <p>
-        MODELS Inc builds brands — but not just any brands.<br>
-        We create products, systems, and rituals that feel inevitable. The kind people don’t just buy — they believe in.
-      </p>
-      <p>
-        Our first is Beau — a sculptural bottle reimagining hydration as a luxury ritual.<br>
-        Born from aesthetic instinct, built with founders like you.
-      </p>
-      <p>
-        And this is just the start.
-      </p>
-      <p>
-        From beauty to wellness, lifestyle to objects of obsession — every future brand will be shaped by the people inside this collective.<br>
-        You’ll have a say. A stake. A space to co-create.
-      </p>
-      <p>
-        We don’t chase trends. We create culture.<br>
-        Built slowly. Built beautifully.<br>
-        Built to last.
-      </p>
-    </section>
-
-    <section>
-      <h2>Who We Back</h2>
-      <p>
-        We don’t hire. We don’t manage. We don’t take applications.
-      </p>
-      <p>
-        We back people who move differently — who lead with taste, intuition, and intention.<br>
-        You don’t need millions of followers. You need vision.<br>
-        You don’t need to perform. You need to feel aligned.
-      </p>
-      <p>
-        If you’re here, it’s because we’ve seen something in you.<br>
-        This isn’t another paid promo. It’s a seat at the table.
-      </p>
-      <p>
-        MODELS Inc is a space for founders — not just influencers.<br>
-        And if you know, you know.
-      </p>
-    </section>
-
-  </div>
+    <a href="apply.html" class="cta-button">Join the List</a>
+  </section>
 
   <footer>
     &copy; MODELS Inc. — 2025
