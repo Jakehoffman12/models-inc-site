@@ -34,6 +34,26 @@
       padding: 0 20px 100px;
     }
 
+    section {
+      margin-bottom: 100px;
+    }
+
+    h2 {
+      font-size: 1.6rem;
+      font-weight: 500;
+      margin-bottom: 30px;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 10px;
+      text-align: left;
+    }
+
+    .centered-text p {
+      font-size: 1.1rem;
+      color: #444;
+      margin: 20px 0;
+      text-align: center;
+    }
+
     details {
       border-top: 1px solid #ccc;
       padding: 30px 0;
@@ -64,7 +84,7 @@
       transform: rotate(90deg);
     }
 
-    p {
+    details p {
       font-size: 1.1rem;
       color: #444;
       margin: 20px 0;
@@ -87,19 +107,21 @@
 
   <div class="container">
 
-    <!-- Open by Default: WHO WE ARE -->
-    <details open>
-      <summary style="text-align: center;">Who we are</summary>
-      <p>MODELS Inc. is a private collective where influence meets ownership.</p>
-      <p>We partner with a handpicked group of like-minded creators — not to just promote brands, but to co-found them.</p>
-      <p>You don’t pay to join. You’re brought in as a co-founder.</p>
-      <p>You gain equity, creative direction, and a seat at the table.</p>
-      <p>This is about building brands that resonate with you — with real meaning and long-term value.</p>
-      <p>Our first brand, Beau, is already in motion — a sculptural bottle reimagining wellness as ritual.</p>
-      <p>And it’s just the beginning.</p>
-      <p>MODELS Inc. is where influence becomes ownership.</p>
-      <p>Where influencers get investment, and investment gets influence.</p>
-    </details>
+    <!-- Static Section: WHO WE ARE -->
+    <section>
+      <h2>Who we are</h2>
+      <div class="centered-text">
+        <p>MODELS Inc. is a private collective where influence meets ownership.</p>
+        <p>We partner with a handpicked group of like-minded creators — not to just promote brands, but to co-found them.</p>
+        <p>You don’t pay to join. You’re brought in as a co-founder.</p>
+        <p>You gain equity, creative direction, and a seat at the table.</p>
+        <p>This is about building brands that resonate with you — with real meaning and long-term value.</p>
+        <p>Our first brand, Beau, is already in motion — a sculptural bottle reimagining wellness as ritual.</p>
+        <p>And it’s just the beginning.</p>
+        <p>MODELS Inc. is where influence becomes ownership.</p>
+        <p>Where influencers get investment, and investment gets influence.</p>
+      </div>
+    </section>
 
     <details>
       <summary>The problem and what we're doing</summary>
